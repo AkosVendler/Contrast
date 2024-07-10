@@ -1,0 +1,10 @@
+#nav {
+    visibility:visible;
+  }
+
+.active-navitem {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #EB5E28;
+}  

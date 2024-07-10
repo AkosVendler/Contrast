@@ -1,0 +1,19 @@
+.dropcap {
+    float: left;
+    font-size: 5rem; /* Az iniciálé méretének beállítása */
+    line-height: 0.5;
+    margin-right: 0.1em;
+    margin-top: 0.2em;
+    color: #252422; /* Szöveg színe */
+    font-weight: 600;
+  }
+
+@media (min-width: 375px) {
+  .dropcap {
+    font-size: 4rem;
+  }
+}
+
+.hidden-text {
+  visibility:hidden;
+}
