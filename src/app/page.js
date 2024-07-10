@@ -89,7 +89,7 @@ export default function Home() {
           <Link href={"/"}><h1 id="logo" className="text-[#252422] font-medium text-4xl">Contrast.</h1></Link>
             <h1
               id="my-text"
-              className="text-[#252422] uppercase font-black xl:text-8xl  2xl:text-9xl mm:text-5xl"
+              className="text-[#252422] uppercase font-black xl:text-8xl mm:pt-10 2xl:text-9xl mm:text-5xl"
             >
               Terek
             </h1>

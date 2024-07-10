@@ -10,7 +10,7 @@ function NavigationItem() {
 
     return (
         <div>
-            <div className="cursor-pointer z-40 w-full h-24 flex items-center justify-center fixed bottom-4">
+            <div className="cursor-pointer z-40 2xl:w-full mm:w-screen h-24 flex items-center justify-center fixed bottom-4">
                 <div
                     id="nav"
                     onClick={toggleNav}
