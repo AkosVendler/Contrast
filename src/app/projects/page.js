@@ -145,7 +145,7 @@ export default function Contacts() {
       <div className="p-5 box-border">
         <div className="top-[-20px] bg-[#FFFCF2] relative z-20 h-28 w-full flex items-center border-b-[#403D39] border-b-[1px] justify-between box-border">
         <Link href={"/"}><h1 className="text-[#252422] font-medium text-4xl">Contrast.</h1></Link>
-          <h1 className="text-[#252422] text-4xl uppercase">Projektek</h1>
+          <h1 className="text-[#252422] mm:text-2xl 2xl:text-4xl uppercase">Projektek</h1>
         </div>
 
         <div className="grid lg:grid-cols-3 lg:grid-rows-5 lg:gap-4 h-1/2 mm:grid-cols-2 mm:grid-rows-3 mm:gap-2">

@@ -6,8 +6,8 @@ import Link from "next/link";
 import "../globals.css";
 import "./style.css";
 import Nav from "../navigatonitem";
-import gsap from "gsap-trial";
-import SplitText from "gsap-trial/SplitText";
+import { gsap } from "gsap";
+import { SplitText } from "../splitText";
 
 export default function Page() {
   const [isNavVisible, setIsNavVisible] = useState(false);
@@ -27,8 +27,6 @@ export default function Page() {
   };
 
   useEffect(() => {
-    gsap.registerPlugin(SplitText);
-
     const chars = [];
     splitRefs.current.forEach((ref) => {
       const mySplitText = new SplitText(ref, { type: "chars" });
@@ -45,8 +43,9 @@ export default function Page() {
       delay: 0.5,
     });
 
+    gsap.set(chars, { visibility: "visible" });
     gsap.to(chars, {
-      opacity: 1,
+      opacity: 0,
     });
 
     gsap.from(profileRef.current, {
@@ -114,7 +113,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <div className="flex 2xl:flex-row w-screen xl:flex-row xl:gap-80 justify-stretch 2xl:px-8 mm:px-0 mm:flex-col-reverse mm:gap-10">
+        <div className="flex 2xl:flex-row w-full xl:flex-row xl:gap-80 justify-stretch 2xl:px-8 mm:px-0 mm:flex-col-reverse mm:gap-10">
           <div className="w-72">
             <div className="border-b-2 border-[#252422]">
               <h2 className="text-[#252422] font-semibold mm:text-xl 2xl:text-3xl">Kövess itt is</h2>
@@ -128,7 +127,7 @@ export default function Page() {
               <Image src="/arrow.svg" width={42} height={42} />
             </div>
           </div>
-          <div className="2xl:w-[1050px] 2xl:pl-80 mm:pl-0  mm:w-[110%] relative 2xl:left-5 mm:left-0">
+          <div className="2xl:w-[1050px] 2xl:pl-80 mm:pl-0  mm:w-[90%] relative 2xl:left-5 mm:left-0">
             <h2 className="text-[#252422] pt-10 font-medium 2xl:text-3xl mm:text-xl">
               <span className="dropcap">L</span>orem ipsum dolor sit amet consectetur. Semper hac phasellus donec lacinia. Placerat auctor sit cras rhoncus diam massa porttitor. Leo cras dictum maecenas nunc quis turpis dui placerat cursus. Sit eget eget velit viverra dolor nibh nunc sed.
             </h2>

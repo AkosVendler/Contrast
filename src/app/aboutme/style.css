@@ -13,3 +13,7 @@
     font-size: 4rem;
   }
 }
+
+.hidden-text {
+  visibility:hidden;
+}

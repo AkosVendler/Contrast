@@ -61,7 +61,7 @@ export default function Contacts() {
 }, []);
   return (
     <>
-    <div className="p-5 box-border">
+    <div className="p-5 box-border w-screen overflow-hidden">
       <div className=" top-[-20px] bg-[#FFFCF2] relative z-20 h-28 w-full flex items-center border-b-[#403D39] border-b-[1px] justify-between box-border">
         <Link href={"/"}><h1 className="text-[#252422] font-medium text-4xl">Contrast.</h1></Link>
         <h1 className="text-[#252422] mm:text-2xl 2xl:text-4xl uppercase">Kapcsolat</h1>
