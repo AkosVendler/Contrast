@@ -15,10 +15,10 @@ export default function Contacts() {
   const [sectionBackgrounds, setSectionBackgrounds] = useState([]);
 
   const sectionBackgrounds1 = [
-    "/galerytempimg.png",
-    "/galerytempimg2.png",
-    "/galerytempimg3.png",
-    "/galerytempimg4.png",
+    "/gallerytempimg.png",
+    "/gallerytempimg2.png",
+    "/gallerytempimg3.png",
+    "/gallerytempimg4.png",
   ];
   const sectionBackgrounds2 = [
     "/galerytempimg2.png",
@@ -47,13 +47,15 @@ export default function Contacts() {
     setSectionBackgrounds(backgrounds);
     setShowModal(true);
     gsap.set(".imagefull", { visibility: "visible" });
-    gsap.set("body", { overflow: "auto" });
+    gsap.set("body", { overflow: "hidden" }); // Disable scrolling when modal is open
+    gsap.set("#full-content", { visibility: "hidden" }); // Hide the main content when modal is open
   };
 
   const closeModal = () => {
     setShowModal(false);
     gsap.set(".imagefull", { visibility: "hidden" });
-    gsap.set("body", { overflow: "hidden" });
+    gsap.set("body", { overflow: "auto" }); // Re-enable scrolling
+    gsap.set("#full-content", { visibility: "visible" }); // Show the main content again
     window.scrollTo(0, 0);
   };
 
@@ -142,7 +144,7 @@ export default function Contacts() {
           </div>
         </div>
       )}
-      <div className="p-5 box-border">
+      <div id="full-content" className="p-5 box-border">
         <div className="top-[-20px] bg-[#FFFCF2] relative z-20 h-28 w-full flex items-center border-b-[#403D39] border-b-[1px] justify-between box-border">
         <Link href={"/"}><h1 className="text-[#252422] font-medium text-4xl">Contrast.</h1></Link>
           <h1 className="text-[#252422] mm:text-2xl 2xl:text-4xl uppercase">Projektek</h1>
@@ -154,7 +156,7 @@ export default function Contacts() {
             onClick={() => openModalWithBackgrounds(sectionBackgrounds1)}
             className="cursor-zoom 
             lg:row-span-5 
-            bg-[url('/galerytempimg.png')] bg-no-repeat bg-cover bg-center
+            bg-[url('/gallerytempimg.png')] bg-no-repeat bg-cover bg-center
             2xl:h-[800px] mm:h-[240px] xl:h-[600px]" 
           ></div>
           <div

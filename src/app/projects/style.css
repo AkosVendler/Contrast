@@ -26,17 +26,16 @@
 
 .imagefull {
   position: absolute;
-  top: -10px;
   left: 0;
   width: 100%;
-  height: 105vh; /* Teljes képernyős magasság */
+  height: 100vh; /* Teljes képernyős magasság */
   z-index: 1000;
   scroll-snap-type: y mandatory;
   overflow-y: scroll; /* Görgetés a section elemekre */
 }
 
 .section {
-  height: 105vh; /* Minden section 100vh magas */
+  height: 100vh; /* Minden section 100vh magas */
   width: 100%; /* Teljes szélesség */
   scroll-snap-align: start; /* Első elem pozícionálása a görgetés során */
   background-size: cover;
